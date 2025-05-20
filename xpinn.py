@@ -325,7 +325,7 @@ def main():
     )
     print(f"Shock wave error with XPINN = {error:.4e}")
     
-    '''# 稀疏波例子
+    # 稀疏波例子
     u0_func_rarefaction = lambda x: torch.where(x<0.0, 0.0, 1.0)
     u_true_rarefaction = lambda x, t: np.where(x<0.0, 0.0, np.where(x<t, x/t, 1.0))
     
@@ -347,7 +347,7 @@ def main():
         b_r=1.0,
         draw=True
     )
-    print(f"Rarefaction wave error with XPINN = {error_rare:.4e}")'''
+    print(f"Rarefaction wave error with XPINN = {error_rare:.4e}")
     
     # 返回比较结果
     return {
