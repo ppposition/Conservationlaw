@@ -7,7 +7,7 @@
 *.tif
 *.tiff
 *.svg
-
+*.pdf
 # 忽略特定目录中的所有文件
 fpinn_results/
 xpinn_results/

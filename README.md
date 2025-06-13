@@ -26,16 +26,11 @@ Burgers方程是一个基本的非线性双曲型偏微分方程：
 ## 代码结构
 
 - `xpinn.py`: XPINN模型实现及求解Burgers方程的主要代码
-- `fpinn.py`: 基于傅里叶特征的PINN模型（用于比较）
+- `fpinn.py`: 基于傅里叶特征的PINN模型
 - `shock_pinn.py`: Shock-PINN模型实现及求解Burgers方程的主要代码
+- `ipinn_simple_test.py` IPINN模型实现及求解Burgers方程的主要代码
 - `conservation.ipynb`: 传统方法以及PINN，LBPINN
 
-### 主要类
-
-1. **`FourierFeatureLayer`**: 傅里叶特征变换层
-2. **`SubNet`**: 子域神经网络
-3. **`XPINN`**: 主XPINN模型，协调多个子网络
-4. **`solve_burgers_with_xpinn`**: 求解Burgers方程的主函数
 
 ## 使用方法
 
@@ -50,14 +45,6 @@ pip install torch numpy matplotlib
 ```bash
 python xpinn.py
 ```
-
-### 关键参数设置
-
-- `n_domains`: 子域数量
-- `scales`: 每个子域的傅里叶特征尺度
-- `N_f`: PDE采样点总数
-- `N_interface`: 接口采样点数量
-- `epochs`: 训练轮数
 
 ## 示例问题
 
